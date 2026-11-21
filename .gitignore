@@ -1,0 +1,22 @@
+
+# 環境変数・秘密情報
+.env
+.env.*
+!.env.example
+
+# Cookieなどの認証情報
+backend/cookies.txt
+
+# IntelliJ
+.idea/
+*.iml
+
+# Mac
+.DS_Store
+
+# Java / Maven
+backend/target/
+
+# React / Node.js
+frontend/node_modules/
+frontend/dist/

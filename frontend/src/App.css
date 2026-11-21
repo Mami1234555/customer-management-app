@@ -1,0 +1,768 @@
+/* =================================
+   全体設定
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #fcf8f8;
+  color: #65545a;
+  font-family: "Helvetica Neue", "Yu Gothic", sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px 24px;
+}
+
+/* =================================
+   タイトル
+================================= */
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+  border-bottom: 2px solid #f0dfe3;
+  color: #a86f80;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 22px;
+  color: #a86f80;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+h3 {
+  color: #ad7887;
+}
+
+/* =================================
+   ログインユーザー情報
+================================= */
+
+.button-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.button-group p {
+  margin: 0;
+}
+
+/* =================================
+   共通ボタン
+================================= */
+
+button {
+  font-family: inherit;
+}
+
+.button-group button,
+.top-menu-button {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.button-group button {
+  padding: 11px 25px;
+  border: none;
+  border-radius: 9px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.search-button {
+  background-color: #cf91a1;
+  color: white;
+}
+
+.search-button:hover {
+  background-color: #b9798b;
+}
+
+.clear-button {
+  background-color: #f5e8eb;
+  color: #a86f80;
+}
+
+.clear-button:hover {
+  background-color: #edd9df;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =================================
+   トップページ
+================================= */
+
+.top-menu {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.top-menu-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 170px;
+  padding: 28px;
+  border: 1px solid #efdde2;
+  border-radius: 16px;
+  background-color: #fffafb;
+  color: #a86f80;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(190, 130, 150, 0.06);
+}
+
+.top-menu-button:hover {
+  transform: translateY(-3px);
+  border-color: #d9a5b2;
+  background-color: #fff5f7;
+  box-shadow: 0 7px 18px rgba(190, 130, 150, 0.12);
+}
+
+.top-menu-button span {
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.top-menu-button small {
+  color: #a98d95;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* =================================
+   検索エリア
+================================= */
+
+.search-section {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid #f0dfe3;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(190, 130, 150, 0.06);
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+/* =================================
+   入力フォーム共通
+================================= */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.form-group label {
+  color: #956c79;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-group input,
+.register-section textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ead9de;
+  border-radius: 9px;
+  background-color: #fffafb;
+  color: #65545a;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.register-section textarea:focus {
+  outline: none;
+  border-color: #cf91a1;
+  box-shadow: 0 0 0 3px rgba(207, 145, 161, 0.13);
+}
+
+.register-section textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+/* =================================
+   顧客一覧
+================================= */
+
+.customer-section {
+  margin-top: 35px;
+}
+
+.result-count {
+  margin-bottom: 18px;
+  color: #a77987;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.customer-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.customer-card {
+  padding: 24px;
+  border: 1px solid #f0dfe3;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(190, 130, 150, 0.05);
+  transition: 0.2s;
+}
+
+.customer-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(190, 130, 150, 0.1);
+}
+
+.customer-card h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2e5e8;
+  font-size: 18px;
+}
+
+.customer-card p {
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+.customer-card .button-group {
+  justify-content: flex-end;
+  margin-top: 18px;
+}
+
+.customer-card .button-group button {
+  min-width: 100px;
+}
+
+/* =================================
+   登録・編集画面
+================================= */
+
+.register-section {
+  margin-top: 25px;
+  padding: 30px;
+  border: 1px solid #f0dfe3;
+  border-radius: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(190, 130, 150, 0.06);
+}
+
+.form-description {
+  margin-bottom: 25px;
+  color: #a98d95;
+  font-size: 14px;
+}
+
+.register-section .form-group {
+  margin-bottom: 21px;
+}
+
+.required {
+  margin-left: 8px;
+  color: #d65b72;
+  font-size: 12px;
+}
+
+/* =================================
+   メッセージ
+================================= */
+
+.error {
+  color: #d65b72;
+  font-size: 14px;
+}
+
+.success-message {
+  margin-top: 20px;
+  padding: 14px 18px;
+  border: 1px solid #ead5dc;
+  border-radius: 10px;
+  background-color: #f8edef;
+  color: #a86f80;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.no-result {
+  padding: 25px;
+  border-radius: 12px;
+  background-color: #fff;
+  color: #aa8791;
+  text-align: center;
+}
+
+/* =================================
+   スマートフォン対応
+================================= */
+
+@media (max-width: 700px) {
+  .container {
+    margin: 15px auto;
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  .top-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .top-menu-button {
+    min-height: 130px;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
+  }
+
+  .customer-list {
+    grid-template-columns: 1fr;
+  }
+
+  .search-section,
+  .register-section {
+    padding: 20px;
+  }
+
+  .button-group {
+    gap: 9px;
+  }
+
+  .button-group button {
+    padding: 11px 16px;
+  }
+
+  .customer-card .button-group button {
+    width: 100%;
+  }
+}
+
+
+/* =================================
+   ログインユーザー情報
+================================= */
+
+.user-header {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 18px;
+  margin-top: 20px;
+  margin-bottom: 28px;
+}
+
+.user-name {
+  margin: 0;
+  color: #8f707a;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.logout-button {
+  padding: 7px 15px;
+  border: 1px solid #ead9de;
+  border-radius: 20px;
+  background-color: #fff;
+  color: #a86f80;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #f8edef;
+  border-color: #d9a5b2;
+}
+
+/* =================================
+   トップページ
+================================= */
+
+.top-section {
+  padding: 38px;
+}
+
+.top-heading {
+  margin-bottom: 32px;
+}
+
+.top-subtitle {
+  margin: 0 0 8px;
+  color: #c18b9a;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.top-heading h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.top-message {
+  margin: 0 0 12px;
+  color: #987783;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.top-heading .form-description {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+/* トップページのメニュー */
+
+.top-menu {
+  margin-top: 25px;
+}
+
+.top-menu-button {
+  min-height: 165px;
+  padding: 30px;
+}
+
+.top-menu-button span {
+  font-size: 19px;
+  letter-spacing: 0.5px;
+}
+
+/* スマートフォン対応 */
+
+@media (max-width: 700px) {
+  .user-header {
+    gap: 10px;
+  }
+
+  .top-section {
+    padding: 22px;
+  }
+}
+
+/* メニューアイコン */
+
+.menu-icon {
+  display: block;
+  margin: 0 0 15px;
+  color: #b98291;
+  transition: 0.2s;
+}
+
+.top-menu-button:hover .menu-icon {
+  color: #a86f80;
+  transform: translateY(-3px);
+}
+
+/* 検索ボタンのアイコン */
+.search-submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.search-button-icon {
+  flex-shrink: 0;
+}
+
+/* =================================
+   施術内容の入力欄
+================================= */
+
+.treatment-description {
+  margin: 0 0 12px;
+  color: #9b858b;
+  font-size: 13px;
+}
+
+.treatment-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.treatment-option {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 14px;
+  border: 1px solid #ead8dd;
+  border-radius: 9px;
+  background-color: #fffafb;
+  color: #725e64;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.treatment-option:hover {
+  background-color: #fdf0f3;
+  border-color: #d9aeba;
+}
+
+.treatment-option input {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  accent-color: #b98291;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.treatment-option span {
+  font-size: 14px;
+}
+
+/* その他の施術・自由入力 */
+
+.treatment-custom-section {
+  margin-top: 4px;
+  margin-left: 5px;
+  padding: 12px 14px 14px;
+  border-left: 3px solid #c58d9c;
+  border-radius: 0 10px 10px 0;
+  background-color: #fdf7f8;
+}
+
+.form-group .treatment-custom-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 5px;
+  color: #a47785;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.treatment-custom-badge {
+  padding: 2px 8px;
+  border-radius: 20px;
+  background-color: #f3e5e9;
+  color: #a77b88;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.treatment-custom-description {
+  margin: 0 0 9px;
+  color: #a38d94;
+  font-size: 11px;
+}
+
+.treatment-custom-input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ead9de;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #65545a;
+  font-family: inherit;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.treatment-custom-input:focus {
+  outline: none;
+  border-color: #cf91a1;
+  box-shadow: 0 0 0 3px rgba(207, 145, 161, 0.13);
+}
+
+.treatment-custom-input::placeholder {
+  color: #b5a3a9;
+}
+
+/* スマートフォン対応 */
+
+@media (max-width: 480px) {
+  .treatment-options {
+    grid-template-columns: 1fr;
+  }
+
+  .treatment-custom-section {
+    margin-left: 2px;
+    padding: 11px 12px 13px;
+  }
+}
+
+
+/* ==============================
+   ログイン画面
+============================== */
+
+.login-page {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 45px 20px;
+  background: #fff7f8;
+  border-radius: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 42px 38px 30px;
+  background: #ffffff;
+  border: 1px solid #f8e8eb;
+  border-radius: 22px;
+  box-shadow: 0 8px 28px rgba(190, 130, 145, 0.12);
+}
+
+.login-heading {
+  text-align: center;
+}
+
+.login-subtitle {
+  margin: 0 0 12px;
+  color: #c98794;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.5px;
+}
+
+.login-heading h1 {
+  margin: 0;
+  color: #604b4d;
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.login-description {
+  margin: 13px 0 0;
+  color: #a58c90;
+  font-size: 13px;
+}
+
+/*.login-divider {*/
+/*  height: 1px;*/
+/*  margin: 27px 0;*/
+/*  background: #f5e2e6;*/
+/*}*/
+
+.login-form-group {
+  margin-bottom: 22px;
+  margin-top: 30px;
+}
+
+.login-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  color: #806367;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.login-page .login-form-group input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid #f0dde1;
+  border-radius: 10px;
+  background: #fffcfc;
+  color: #604b4d;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-page .login-form-group input::placeholder {
+  color: #c5b3b6;
+}
+
+.login-page .login-form-group input:focus {
+  border-color: #d995a2;
+  box-shadow: 0 0 0 3px rgba(217, 149, 162, 0.12);
+}
+
+.login-submit-button {
+  display: block;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 40px;
+  border: none;
+  border-radius: 11px;
+  background: #d995a2;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.login-submit-button:hover {
+  background: #c98290;
+  transform: translateY(-1px);
+}
+
+.login-submit-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-footer {
+  margin: 24px 0 0;
+  color: #b49a9e;
+  font-size: 10px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+@media (max-width: 600px) {
+  .login-page {
+    min-height: 70vh;
+    padding: 25px 12px;
+  }
+
+  .login-card {
+    padding: 35px 23px 26px;
+  }
+
+  .login-heading h1 {
+    font-size: 27px;
+  }
+}
